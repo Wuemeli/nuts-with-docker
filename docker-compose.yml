@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - PORT=80
+      - GITHUB_TOKEN=your_default_token
+      - GITHUB_REPO=Username/MyApp
+      - API_USERNAME=hello
+      - API_PASSWORD=world
+      - TRUST_PROXY=loopback
